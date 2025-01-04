@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Paid Panels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff7f50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .plans {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .plan {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .plan:hover {
+            transform: scale(1.05);
+        }
+        .plan h2 {
+            font-size: 2em;
+            color: #ff4500;
+        }
+        .plan p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .plan ul {
+            list-style-type: none;
+            padding: 0;
+            color: #555;
+        }
+        .plan ul li {
+            margin: 10px 0;
+        }
+        .buy-button {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buy-button:hover {
+            background-color: #e03e00;
+        }
+        .back-button {
+            display: block;
+            margin: 30px auto;
+            background-color: #bbb;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #888;
+        }
+        .checkbox {
+            margin: 10px;
+        }
+        .total {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff4500;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>OUR MENU</h1>
+    </div>
+    <div class="plans">
+        <!-- SPICY DAY SPECIAL PIZZA -->
+        <div class="plan">
+            <h2>SPICY DAY SPECIAL PIZZA</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="spicySmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="spicyMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="spicyLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- VEGE LOVER -->
+        <div class="plan">
+            <h2>VEGE LOVER</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="vegeSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="vegeMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="vegeLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- TIKKA -->
+        <div class="plan">
+            <h2>TIKKA</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="tikkaSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="tikkaMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="tikkaLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- FAJITA -->
+        <div class="plan">
+            <h2>FAJITA</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="fajitaSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="fajitaMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="fajitaLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- CHEESE LOVER -->
+        <div class="plan">
+            <h2>CHEESE LOVER</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="cheeseSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="cheeseMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="cheeseLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- CREAMY PIZZA -->
+        <div class="plan">
+            <h2>CREAMY PIZZA</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="creamySmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="creamyMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="creamyLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- MARGHERITA -->
+        <div class="plan">
+            <h2>KABABISH PIZZA </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="margheritaSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="margheritaMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="margheritaLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- BBQ CHICHEN-->
+        <div class="plan">
+            <h2>CHICKEN SUPREME </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="bbqSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="bbqMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="bbqLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- PEPPERONI -->
+        <div class="plan">
+            <h2>CROWN CRUST </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="pepperoniSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="pepperoniMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="pepperoniLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- SMOKE HOUSE -->
+        <div class="plan">
+            <h2>SMOKE HOUSE </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="capricciosaSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="capricciosaMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="capricciosaLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- PERI PERI -->
+        <div class="plan">
+            <h2>PERI PERI</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="hawaiianSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="hawaiianMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="hawaiianLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+
+        <!-- BBQ CHICKEN -->
+        <div class="plan">
+            <h2>MEAT LOVER </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="bbqChickenSmall1" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="bbqChickenMedium1" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="bbqChickenLarge1" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+        <div class="plan">
+            <h2>PIZZA PIE </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="hawaiianSmall" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="hawaiianMedium" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="hawaiianLarge" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+        
+        <!-- MEAT LOVERS -->
+        <div class="plan">
+            <h2>LEGEND RANCH</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="meatLoversSmall" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="meatLoversMedium" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="meatLoversLarge" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+        
+        <!-- MARGHERITA -->
+        <div class="plan">
+            <h2>BEEF PEPERONI</h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="margheritaSmall" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="margheritaMedium" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="margheritaLarge" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+        
+        <!-- FOUR CHEESE -->
+        <div class="plan">
+            <h2>LAZANIA </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="fourCheeseSmall" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="fourCheeseMedium" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="fourCheeseLarge" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+        
+        <!-- PEPPERONI -->
+        <div class="plan">
+            <h2>STUFF CRUST </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="pepperoniSmall" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="pepperoniMedium" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="pepperoniLarge" value="1200" onclick="calculateTotal()"> Large
+            </div>
+        </div>
+        
+        <!-- CHICKEN TIKKA -->
+        <div class="plan">
+            <h2>DOUBLE MELT PIZZA </h2>
+            <p>SMALL Price: 450</p>
+            <p>MEDIUM Price: 900</p>
+            <p>LARGE Price: 1200</p>
+            <div class="checkbox">
+                <input type="checkbox" id="chickenTikkaSmall" value="450" onclick="calculateTotal()"> Small
+                <input type="checkbox" id="chickenTikkaMedium" value="900" onclick="calculateTotal()"> Medium
+                <input type="checkbox" id="chickenTikkaLarge" value="1200" onclick="calculateTotal()"> Large
+            </div>
+
+    </div>
+    <div class="total">
+        Total Price: <span id="totalPrice">0</span>
+    </div>
+    <script>
+        function calculateTotal() {
+            let total = 0;
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                total += parseInt(checkbox.value);
+            });
+            document.getElementById('totalPrice').innerText = total;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
